@@ -1,0 +1,51 @@
+<div class="card1">
+<form  [formGroup]="loginForm">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Email address</label>
+      <input type="email" id="form2Example1" class="form-control" formControlName="username"/>
+   
+      <span *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid" class="text-danger">please enter user name</span>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Password</label>
+      <input type="password" id="form2Example2" class="form-control"  formControlName="password"/>
+
+      <span *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="text-danger">please enter password</span>
+    </div>
+  <span *ngIf="LogginFails" class="text-danger">Email id or Password is incorrect </span>
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+   
+      </div>
+  </div>
+  
+    <!-- Submit button -->
+    <button class="btn btn-info btn-lg btn-block" type="button" (click)="_loginUser()" [disabled]="loginForm.invalid" >Login</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a routerLink="/front/user/registration">Register</a></p>
+      <p>or sign up with:</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button>
+    </div>
+  </form>
+</div>

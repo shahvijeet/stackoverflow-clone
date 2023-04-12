@@ -1,0 +1,18 @@
+.card{
+    width: 450px;
+    padding: 30px;
+    border-radius: 40px;
+    margin-left: 100px;
+    margin-top: 30px;    
+    background: #2b2d3f;
+    }
+h1,h6{
+    color: #fff;
+    
+}
+label{
+    color: #fff;
+}
+.card label h1{
+    color: #fff;
+}

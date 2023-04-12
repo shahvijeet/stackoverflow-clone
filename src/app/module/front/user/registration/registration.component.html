@@ -1,0 +1,47 @@
+
+<div class="mask d-flex align-items-center h-25  w-75 gradient-custom-3 pb-5">
+    <div class="container h-25">
+      <div class="row d-flex justify-content-center align-items-center h-25">
+        
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5" style="color: aliceblue;">Create an account</h2>
+
+              <form [formGroup]="regForm">
+
+                <div class="form-outline mb-4">
+                    <label class="form-label"  for="form3Example1cg">Display Name</label>
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" formControlName="displayName" /> 
+                 <span style="color:red" *ngIf="regForm.get('displayName')?.touched && regForm.get('displayName')?.invalid">plase enter valid display name</span>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label"  for="form3Example3cg">Your Email</label>
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" 
+                   formControlName="email" />
+                   <span style="color:red" *ngIf="regForm.get('email')?.touched && regForm.get('email')?.invalid">plase enter valid email</span>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label"  for="form3Example4cg">Password</label>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg"     formControlName="password" />
+                  <span style="color:red" *ngIf="regForm.get('password')?.touched && regForm.get('password')?.invalid">plase enter valid password</span>
+                </div>
+
+
+<div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="btn btn-info btn-block btn-lg gradient-custom-4 text-body" [disabled]="regForm.invalid" (click)="register()">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a routerLink="/front/user/login"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+    
+      </div>
+    </div>
+  </div>

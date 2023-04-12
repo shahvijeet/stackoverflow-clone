@@ -1,0 +1,15 @@
+.user_btn{
+    margin-left: 20%;
+}
+form{
+    margin-left: 5%;
+}
+input{
+    width: 550px;
+}
+.bg-body-tertiary {
+    background-color: #2b2d3f;
+  }
+  h3{
+    color: white;
+  }

@@ -1,0 +1,14 @@
+.card1{
+    width: 420px;
+    border-radius: 20px;
+    padding: 40px;
+    background: #2b2d3f;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+h1,h6{
+    color: #fff;
+}
+label{
+    color: #fff;
+}
