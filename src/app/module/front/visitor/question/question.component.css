@@ -1,0 +1,15 @@
+
+.all{
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+#userInfo{
+    margin-left: 70%    ;
+}
+.question_container{
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}

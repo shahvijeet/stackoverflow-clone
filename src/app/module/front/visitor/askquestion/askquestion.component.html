@@ -1,0 +1,20 @@
+<div class="main" >
+    <form [formGroup]="questionForm">
+    <div class="mb-3" >
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" formControlName="title" required>
+    <button class="btn btn-info mt-2" [disabled]="!(questionForm?.get('title')?.valid)" (click)="enableDetailsInput()">Next</button>
+
+  </div>
+  <div class="mb-3" *ngIf="detailsInputEnabled" >
+    <label for="details" class="form-label">Details of the problem</label>
+    <textarea class="form-control" id="details" formControlName="details"></textarea>
+    <button class="btn btn-info mt-2" [disabled]="!(questionForm?.get('details')?.valid)" (click)="enableTagsInput()">Next</button>
+  </div>
+  <div class="mb-3" *ngIf="tagsInputEnabled" >
+    <label for="tags" class="form-label">Tags</label>
+    <input type="text" class="form-control" id="tags" formControlName="tags">
+    <button class="btn btn-info mt-5 me-5  " [disabled]="!questionForm?.get('tags')?.valid" (click)="submitQuestion()">Submit</button>
+  </div> 
+</form>
+</div>
