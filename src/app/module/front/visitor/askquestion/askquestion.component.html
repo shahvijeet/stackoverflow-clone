@@ -14,7 +14,7 @@
   <div class="mb-3" *ngIf="tagsInputEnabled" >
     <label for="tags" class="form-label">Tags</label>
     <input type="text" class="form-control" id="tags" formControlName="tags">
-    <button class="btn btn-info mt-5 me-5  " [disabled]="!questionForm?.get('tags')?.valid" (click)="submitQuestion()">Submit</button>
+    <button class="btn btn-info mt-5 me-5  " [disabled]="!questionForm?.get('tags')?.valid" (click)="_add()">Submit</button>
   </div> 
 </form>
 </div>
