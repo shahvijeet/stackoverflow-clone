@@ -43,7 +43,7 @@ export class AskquestionComponent implements OnInit {
 
     const body:askQuestion = {
       userID:this.userData.id,
-      userName: this.userData.displayNgit iame,
+      userName: this.userData.displayName,
       vote: 0,
       view: 0,
       title: data.title,
