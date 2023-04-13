@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { askQuestion } from 'src/app/models/askquestion.model';
+import { VisitorService } from 'src/app/services/visitor.service';
 
 @Component({
   selector: 'app-askquestion',
@@ -12,7 +13,7 @@ export class AskquestionComponent implements OnInit {
   detailsInputEnabled = false;
   tagsInputEnabled = false;
   userData!:any
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private visitorservice:VisitorService) { }
 
   ngOnInit(): void {
     this.questionForm = this.formBuilder.group({
@@ -52,8 +53,19 @@ export class AskquestionComponent implements OnInit {
       createdAt: new Date().toLocaleString(),
       answers: []
     }
-
+    this.visitorservice.submitQue(body).subscribe(
+      (res) => {
+        console.log(res);
+        // Handle next operation here
+        alert('Question Submitted')
+        this.questionForm.reset()
+      },
+      (err) => {
+        console.error(err);
+        // Handle error operation here
+      }
+    );
     console.log(body);
-    
+
   }
 }

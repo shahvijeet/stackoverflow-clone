@@ -13,6 +13,79 @@
       "id": 2
     }
   ],
-  "question":[]
-
+  "question": [
+    {
+      "userID": 1,
+      "userName": "vijeet",
+      "vote": 0,
+      "view": 0,
+      "title": "angular",
+      "qDescrition": "this is about angular test.",
+      "tags": [
+        "angular",
+        "js",
+        "test"
+      ],
+      "createdAt": "13/4/2023, 10:02:59 am",
+      "answers": [],
+      "id": 1
+    },
+    {
+      "userID": 1,
+      "userName": "vijeet",
+      "vote": 0,
+      "view": 0,
+      "title": "javascript",
+      "qDescrition": "what is the basic of java script? what is the best way to learn java-script?\n",
+      "tags": [
+        "javascript"
+      ],
+      "createdAt": "13/4/2023, 10:06:11 am",
+      "answers": [],
+      "id": 2
+    },
+    {
+      "userID": 2,
+      "userName": "ram",
+      "vote": 0,
+      "view": 0,
+      "title": "angular",
+      "qDescrition": "what is Angular? main concept of  Angular?",
+      "tags": [
+        "angular"
+      ],
+      "createdAt": "13/4/2023, 10:09:59 am",
+      "answers": [],
+      "id": 3
+    },
+    {
+      "userID": 2,
+      "userName": "ram",
+      "vote": 0,
+      "view": 0,
+      "title": "angular test",
+      "qDescrition": "how can i complete test ?",
+      "tags": [
+        "angular",
+        "test"
+      ],
+      "createdAt": "13/4/2023, 10:11:59 am",
+      "answers": [],
+      "id": 4
+    },
+    {
+      "userID": 1,
+      "userName": "vijeet",
+      "vote": 0,
+      "view": 0,
+      "title": "javascript",
+      "qDescrition": "scdgfhtjykopplkjh",
+      "tags": [
+        ""
+      ],
+      "createdAt": "13/4/2023, 10:47:01 am",
+      "answers": [],
+      "id": 5
+    }
+  ]
 }

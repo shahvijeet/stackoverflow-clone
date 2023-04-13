@@ -10,6 +10,10 @@ import { LayoutComponent } from './layouts/layout/layout.component';
 import { HomeComponent } from './layouts/home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,14 @@ import { HttpClientModule } from '@angular/common/http';
     PagenotfoundComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
   ],
   providers: [],
   bootstrap: [AppComponent]

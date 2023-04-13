@@ -1,27 +1,46 @@
 <div class="container mt-5">
     <div class="row">
         <div class="d-flex all">
-            <p>All Questions</p>
+            <p>All Questions({{Question.length}})</p>
             <button class="btn btn-info" routerLink="/front/visitor/askquestion">Ask Questions</button>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col col-md-3">1245472   </div>
-        <div class="col col-md-7">filter options</div>
-        <div class="col-2">filter</div>
-    </div>
-    <div class="container d-flex mt-3 question_container" >
-        <div>
-            <ul><li>vote</li>
-            <li>answer</li>
-        <li>view</li></ul>
-        
-        </div>
-            <div class="mx-5">
-                <a href="">Qestion title fdghjkl;pokijhugfvbhjkloiuygfvhbnjkoiuytgfvbhjnkoiuygfc</a><br>
-                <span class="badge text-bg-info">Tags</span>
-                <div class="d-flex" id="userInfo"> <p class="me-2">username</p><p class="me-2">askquestion </p> <p>time</p></div>
-            </div>
-    </div>
 
+
+
+    <main class="content">
+        <div class="container mt-3">
+            <div class="row row-cols-1 g-4 w-250 mb-3" *ngFor="let item of Question;let i=index">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <p class="card-text fs-6">View: {{item.view}}</p>
+                                    <p class="card-text fs-6">Vote : {{item.vote}}</p>
+                                    <p class="card-text fs-6">Answer : {{item.answers.length}}</p>
+                                </div>
+                                <div class="col">
+
+                                    <h5 class="card-title fs-5"><span class="text-success">Title :</span> {{item.title}}
+                                    </h5>
+
+                                    <p class="card-text fs-6">User Name:{{item.userName}} : User Id:{{item.userID}}</p>
+                                    <!-- <p class="card-text fs-6">User Id:{{item.userID}}</p> -->
+                                    <p class="card-text fs-6">Question: {{item.qDescrition}}</p>
+                                    <p class="card-text fs-6">Tag: {{item.tags}}</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more cards here using ngFor -->
+
+            </div>
+        </div>
+    </main>
 </div>

@@ -6,7 +6,7 @@ import { AskquestionComponent } from './askquestion/askquestion.component';
 
 const routes: Routes = [
   {path:'question',component:QuestionComponent},
-  {path:'question/:id',component:QuestionComponent},
+  {path:'answer/:id/:title',component:QuestionComponent},
   {path:'tag',component:TagComponent},
   {path:'askquestion',component:AskquestionComponent}
 ];

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class LoginComponent  implements OnInit {
   userData!: any
   LogginFails:boolean = false
   constructor(private formBuilder: FormBuilder,
-  private userService:UserService) {
+  private userService:UserService,
+  private toastr:ToastrService) {
    
   }
 
@@ -44,6 +46,7 @@ export class LoginComponent  implements OnInit {
         if (item.email == body.username && item.password == body.password) {
           localStorage.setItem('userData',JSON.stringify(item))
           alert('Login Success')
+          this.toastr.success('Login Success', 'Toastr fun!');
           window.location.href = '/home'
           this.LogginFails = false
         }
